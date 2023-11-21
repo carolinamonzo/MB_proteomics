@@ -5,19 +5,11 @@ date: "2023-10-27"
 author: "Carolina Monzo"
 ---
   
-  Read in the files and format to remove negative values and mice that failed.
+Read in the files and format to remove negative values and mice that failed.
 ```{r}
 library(dplyr)
 library(stringr)
-#library(mixOmics)
-#library(impute)
 library(tidyr)
-#library(multcomp)
-#library(clusterProfiler)
-#library(enrichplot)
-#library(ggupset)
-#library(pathview)
-#library(ggnewscale)
 
 # Format removing the sequencing information from Olink
 first <- read.csv("../data/Q-03195_Kroef_NPX.csv", sep = ";")
@@ -100,6 +92,8 @@ stats.control <- as.data.frame(stats.control)
 write.csv(stats.males, "../analysis/stats_femaleMale_controls_maarouf.csv")
 
 View(stats.control)
+
+# Get the immune genes we are interested in
 
 vec_subset <- c("Ahr","Casp3","Ccl2","Ccl20","Ccl3","Ccl5","Csf2","Cxcl1","Cxcl9","Cyr61","Dll1","Eda2r","Epo","Erbb4","Fas"
                 ,"Fstl3","Gcg","Ghrl","Il10","Il17a","Il17f","Il1a","Il1b","Il23r","Il5","Il6","Itgb6","Kitlg","Lgmn","Map2k6"
