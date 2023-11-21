@@ -9,15 +9,15 @@ Read in the files and format to remove negative values and mice that failed.
 ```{r}
 library(dplyr)
 library(stringr)
-#library(mixOmics)
-#library(impute)
+library(mixOmics)
+library(impute)
 library(tidyr)
-#library(multcomp)
-#library(clusterProfiler)
-#library(enrichplot)
-#library(ggupset)
-#library(pathview)
-#library(ggnewscale)
+library(multcomp)
+library(clusterProfiler)
+library(enrichplot)
+library(ggupset)
+library(pathview)
+library(ggnewscale)
 
 # Format removing the sequencing information from Olink
 first <- read.csv("../data/Q-03195_Kroef_NPX.csv", sep = ";")
